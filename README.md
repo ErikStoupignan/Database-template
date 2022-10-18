@@ -13,7 +13,7 @@
 4. Create a new branch for working and make changes to adapt it according to your requirements.
 
 
-## Authors
+## Author
 
 👤 **Erik Stoupignan Sánchez Beltrán**
 
