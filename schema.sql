@@ -11,5 +11,4 @@ weight_kg decimal,
 PRIMARY KEY(id)
 );
 
-/* Project 2 */
-ALTER TABLE animals ADD species VARCHAR(250);
+
