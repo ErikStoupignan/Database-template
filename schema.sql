@@ -36,3 +36,6 @@ ADD CONSTRAINT fk_species
 FOREIGN KEY(id)
 REFERENCES animals(id)
 ON DELETE CASCADE;
+
+UPDATE animals SET species_id='Digimon' WHERE name LIKE '%mon';
+UPDATE animals SET species_id='Pokemon' WHERE name NOt LIKE '%mon';
