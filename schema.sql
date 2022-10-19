@@ -28,3 +28,11 @@ full_name VARCHAR(250),
 PRIMARY KEY(id)
 );
 
+ALTER TABLE animals ADD owners_id VARCHAR(250);
+ALTER TABLE animals ADD species_id VARCHAR(250);
+
+ALTER TABLE species
+ADD CONSTRAINT fk_species
+FOREIGN KEY(id)
+REFERENCES animals(id)
+ON DELETE CASCADE;
