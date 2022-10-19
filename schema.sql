@@ -13,3 +13,12 @@ PRIMARY KEY(id)
 
 /* Project 2 */
 ALTER TABLE animals ADD species VARCHAR(250);
+
+/* Project 3 */ 
+CREATE TABLE owners(
+id INT GENERATED ALWAYS AS IDENTITY, 
+full_name VARCHAR(250), 
+age INT,
+PRIMARY KEY(id)
+);
+
