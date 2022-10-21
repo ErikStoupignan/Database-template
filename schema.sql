@@ -43,3 +43,42 @@ UPDATE animals SET owners_id='3' WHERE name = 'Devimon' OR name = 'Plantmon';
 UPDATE animals SET owners_id='4' WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
 UPDATE animals SET owners_id='5' WHERE name = 'Angemon' OR name = 'Boarmon';
 
+/* Project 4 */ 
+CREATE TABLE vets(
+id            INT GENERATED ALWAYS AS IDENTITY,
+name          VARCHAR(250),
+age           INT,
+date_of_graduation    date,
+PRIMARY KEY(id)
+);
+
+CREATE TABLE specializations(
+vet_id           INT,
+species_id       INT
+);
+
+ALTER TABLE specializations
+ADD CONSTRAINT fk_species
+FOREIGN KEY (species_id)
+REFERENCES species(id);
+
+ALTER TABLE specializations
+ADD CONSTRAINT fk_vets
+FOREIGN KEY (vet_id)
+REFERENCES vets(id);
+
+CREATE TABLE visits(
+vet_id           INT,
+animals_id       INT,
+date_of_visit            date
+);
+
+ALTER TABLE visits
+ADD CONSTRAINT fk_animals
+FOREIGN KEY (animals_id)
+REFERENCES animals(id);
+
+ALTER TABLE visits
+ADD CONSTRAINT fk_vets
+FOREIGN KEY (vet_id)
+REFERENCES vets(id);
