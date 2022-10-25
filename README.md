@@ -1,5 +1,7 @@
 # Databases-projects
 
+![image](https://user-images.githubusercontent.com/106561762/197849378-4271af60-2dd3-4eb1-8b96-ac126d621878.png)
+
 ### Setup
 
 1. Create an empty folder in your computer to store the clone.
